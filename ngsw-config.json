@@ -22,25 +22,5 @@
         ]
       }
     }
-  ],
-  "dataGroups": [
-    {
-      "name": "cached",
-      "urls": ["/second"],
-      "cacheConfig": {
-        "maxSize": 1,
-        "maxAge": "30s",
-        "strategy": "performance"
-      }
-    },
-    {
-      "name": "cached",
-      "urls": ["/thrid"],
-      "cacheConfig": {
-        "maxSize": 100,
-        "maxAge": "45s",
-        "strategy": "freshness"
-      }
-    }
   ]
 }

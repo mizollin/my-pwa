@@ -10,7 +10,7 @@ import { Observable, ReplaySubject, interval } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'MyPwa!';
+  title = 'My Pwa!';
   date$: Observable<any>;
   secondDate$: Observable<any>;
   thirdDate$: Observable<any>;

@@ -1,7 +1,6 @@
 {
-  "version": "1",
-  "name": "MyPwa",
-  "short_name": "MyPwa",
+  "name": "my-pwa",
+  "short_name": "my-pwa",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",

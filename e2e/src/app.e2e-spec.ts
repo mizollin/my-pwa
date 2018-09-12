@@ -9,6 +9,6 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to MyPwa!');
+    expect(page.getParagraphText()).toEqual('Welcome to my-pwa!');
   });
 });
