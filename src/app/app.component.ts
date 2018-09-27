@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   thirdDate$: Observable<any>;
 
   constructor(private swUpdate: SwUpdate, private swPush: SwPush, private http: HttpClient) {
+
     swUpdate.available.subscribe(() => {
       alert('update available');
     });
@@ -44,5 +45,21 @@ export class AppComponent implements OnInit {
     );
   }
 
+  enablePush() {
+    this.swPush.requestSubscription(
+      {serverPublicKey: 'BM7wU4W9tLBRKRVIz3eaORb9r2tDeVCjb-Ck9BCMQGYdGgzUywsCBt0zTtGEzgVpNCJvOJPC6IcvMxnHBi0mec4'}
+    ).then((sub) => {
+      console.log('PUSH SUB: ', sub);
+      this.subscribePush(sub);
+    });
+  }
 
+  subscribePush(sub: PushSubscription) {
+    console.log('subscribePush');
+    this.http.post('http://localhost:3000/subscribe', sub).pipe(
+      tap((res) => {
+        console.log(res);
+      })
+    ).subscribe();
+  }
 }

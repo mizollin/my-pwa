@@ -19,6 +19,9 @@
       "resources": {
         "files": [
           "/assets/**"
+        ],
+        "urls": [
+          "https://2bit-cdn.azureedge.net/**"
         ]
       }
     }
