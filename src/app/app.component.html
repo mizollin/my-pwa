@@ -2,6 +2,9 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
+
+  <h2>Caching</h2>
+
   <dl>
     <dt>No Configuration</dt>
     <dd>{{date$ | async}}</dd>
@@ -14,11 +17,17 @@
     <button (click)="refresh()">Refresh</button>
   </div>
 
+  <h2>Push Notifications</h2>
+
   <div>
     <button (click)="enablePush()">Setup Push</button>
   </div>
 
-  <img width="300" alt="Angular Logo" src="https://cdn.2bitcloud.ch/img/logo/2bit.svg">
+  <div>
+    <button (click)="notifyMe()">Send Push</button>
+  </div>
+
+  <img width="300" alt="2BIT Logo" src="https://cdn.2bitcloud.ch/img/logo/2bit.svg">
 
 </div>
 

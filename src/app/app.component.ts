@@ -62,4 +62,9 @@ export class AppComponent implements OnInit {
       })
     ).subscribe();
   }
+
+  notifyMe() {
+    console.log('notifyMe');
+    this.http.post('http://localhost:3000/notifyme', {}).subscribe();
+  }
 }
