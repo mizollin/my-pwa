@@ -19,31 +19,7 @@
       "resources": {
         "files": [
           "/assets/**"
-        ],
-        "urls": [
-          "https://2bit-cdn.azureedge.net/**"
         ]
-      }
-    }
-  ],
-  "dataGroups": [
-    {
-      "name": "cached",
-      "urls": ["/second"],
-      "cacheConfig": {
-        "maxSize": 1,
-        "maxAge": "15s",
-        "strategy": "performance"
-      }
-    },
-    {
-      "name": "cached",
-      "urls": ["/thrid"],
-      "cacheConfig": {
-        "maxSize": 1,
-        "timeout": "500u",
-        "maxAge": "15s",
-        "strategy": "freshness"
       }
     }
   ]
