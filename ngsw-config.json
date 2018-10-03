@@ -21,7 +21,7 @@
           "/assets/**"
         ],
         "urls": [
-          "https://2bit-cdn.azureedge.net/**"
+          "https://cdn.2bitcloud.ch/**"
         ]
       }
     }
