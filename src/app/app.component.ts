@@ -1,8 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { SwUpdate, SwPush } from '@angular/service-worker';
-import { HttpClient } from '@angular/common/http';
-import { take, map, tap } from 'rxjs/operators';
-import { Observable, ReplaySubject, interval } from 'rxjs';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
