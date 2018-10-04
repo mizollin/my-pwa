@@ -1,7 +1,8 @@
+import { SwUpdate } from '@angular/service-worker';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import {map} from 'rxjs/operators';
+import { Observable, interval } from 'rxjs';
+import {map, tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -15,10 +16,11 @@ export class AppComponent implements OnInit {
   secondDate$: Observable<any>;
   thirdDate$: Observable<any>;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private swUpdate: SwUpdate) {
   }
 
   ngOnInit(): void {
+    this.updateCheck();
     this.refresh();
   }
 
@@ -34,6 +36,17 @@ export class AppComponent implements OnInit {
     this.thirdDate$ = this.http.get('http://localhost:3000/third').pipe(
       map((res) => res)
     );
+  }
+
+  updateCheck() {
+      this.swUpdate.available.subscribe(() => {
+      alert('update available');
+    });
+
+    interval(10000).pipe(tap(() => {
+      console.log('UPDATE CHECK');
+      this.swUpdate.checkForUpdate();
+    })).subscribe();
   }
 
 }
