@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Run backend
 
-We have a simple express backend. Run it with node backend/app.js.
+We have a simple express backend. Run it with: node backend/app.js.
 
 ## Run frontend
 
