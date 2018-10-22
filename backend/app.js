@@ -3,7 +3,7 @@ var cors = require('cors');
 var app = express();
 
 var originsWhitelist = [
-  'http://localhost:8080'
+  'http://localhost:8888'
 ];
 
 var corsOptions = {
