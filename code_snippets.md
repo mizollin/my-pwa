@@ -18,7 +18,7 @@
 	},
 	{
 	  "name": "cached",
-	  "urls": ["/thrid"],
+	  "urls": ["/third"],
 	  "cacheConfig": {
 		"maxSize": 1,
 		"timeout": "500u",
